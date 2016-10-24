@@ -1,0 +1,73 @@
+<ion-header>
+	<ion-navbar color="primary">
+		<ion-title>
+			Register for Test Drive
+		</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content padding color="light">
+	<ion-list>
+		<ion-item>
+			<ion-label floating>Driver's Licence</ion-label>
+			<ion-input type="text"></ion-input>
+			<button clear item-right name="barcode" (click)="scan()">Scan</button>
+		</ion-item>
+		<ion-card>
+			<ion-card-header>Driver's Picture</ion-card-header>
+			<ion-card-content>
+				<ion-item>
+					<!--<ion-label floating>Driver's Picture</ion-label>-->
+					<img [src]="base64Image" *ngIf="base64Image" border="1" />
+				</ion-item>
+			</ion-card-content>
+			<ion-row>
+				<ion-col center text-center>
+					<button primary clear small (click)="takePicture()">
+						<ion-icon name="camera"></ion-icon>
+						<div>Snap</div>
+					</button>
+				</ion-col>
+			</ion-row>
+		</ion-card>
+			<ion-row>
+				<ion-item>
+					<ion-label stacked>Salutation</ion-label>
+					<ion-select>
+						<ion-option value="Mr." selected="true">Mr.</ion-option>
+						<ion-option value="Ms.">Ms.</ion-option>
+						<ion-option value="Mrs.">Mrs.</ion-option>
+						<ion-option value="Dr.">Dr.</ion-option>
+					</ion-select>
+				</ion-item>
+				<ion-item>
+					<ion-label floating>Last Name</ion-label>
+					<ion-input type="text"></ion-input>
+				</ion-item>
+			</ion-row>
+		<ion-item>
+			<ion-label floating>First Name</ion-label>
+			<ion-input type="text"></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-label floating>Mobile No.</ion-label>
+			<ion-input type="tel"></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-label floating>Current Car</ion-label>
+			<ion-input type="text"></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-label stacked>Model of Interest</ion-label>
+			<ion-select>
+				<ion-option value="Model Uno" selected="true">Model Uno</ion-option>
+				<ion-option value="Model Barracuda">Model Barracuda</ion-option>
+				<ion-option value="Model Centium">Model Centium</ion-option>
+				<ion-option value="Model Delta">Model Delta</ion-option>
+			</ion-select>
+		</ion-item>
+
+
+
+	</ion-list>
+</ion-content>
